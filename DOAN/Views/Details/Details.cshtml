@@ -1,0 +1,88 @@
+﻿@using DOAN.Models
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="container">
+   
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item carousel-size active">
+                            <img src="~/Content/Img/@Model.ANHSLIDE1" class="d-block w-100" alt="First slide">
+                        </div>
+                        <div class="carousel-item carousel-size">
+                            <img src="~/Content/Img/@Model.ANHSLIDE2" class="d-block w-100" alt="Second slide">
+                        </div>
+                        <div class="carousel-item carousel-size">
+                            <img src="~/Content/Img/@Model.ANHSLIDE3" class="d-block w-100" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <br>
+                <button class="price">@String.Format("{0:0,0}", @Model.GIA) VNĐ</button>
+            </div>
+            <div class="col">
+                <div class="content-sp">
+                    <h1 class="ten-sp">@Model.TENPHIM</h1>
+
+                    <h1 class="mota-dm">Đặc tính sản phẩm:</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="danhmuc">Loại bàn phím: </h1>
+                                <p class="content-dm-sp">@Model.TENTL</p>
+                                <h1 class="danhmuc">Năm sản xuất: </h1>
+                                <p class="content-dm-sp">@Model.NAMSX</p>
+                                <h1 class="danhmuc">Nhà phân phối: </h1>
+                                <p class="content-dm-sp">@Model.TENNPP</p>
+                                <h1 class="danhmuc">Bảo hành: </h1>
+                                <p class="content-dm-sp">@Model.BAOHANH Tháng</p>
+                            </div>
+                            <div class="col">
+                                <h1 class="danhmuc">Hãng sản xuất:</h1>
+                                <p class="content-dm-sp">@Model.TENHA</p>
+                                <h1 class="danhmuc">Phụ kiện:</h1>
+                                <p class="content-dm-sp">@Model.PHUKIEN</p>
+                                <h1 class="danhmuc">Xuất xứ:</h1>
+                                <p class="content-dm-sp">@Model.TENNC</p>
+                            </div>
+                            <button class="mua"><a href="@Url.Action("ThemGioHang", "GioHang", new { @sMASP = Model.MASP, @strURL = Request.Url.ToString() })">Mua Ngay!</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <h2 class="tieude">Thông tin chi tiết</h2>
+            <br>
+            <h1 class="ten-sp" style="text-align: center;">@Model.TENPHIM</h1>
+            <br>
+            <p class="mota-sp">@Model.MOTA1</p>
+            <p class="mota-sp">@Model.MOTA2</p>
+            <p class="mota-sp">@Model.MOTA3</p>
+            <img class="img-sp" src="~/Content/Img/@Model.IMG1">
+            <p class="mota-sp">@Model.MOTA4</p>
+            <img class="img-sp" src="~/Content/Img/@Model.IMG2">
+            <p class="mota-sp">@Model.MOTA5</p>
+            <img class="img-sp" src="~/Content/Img/@Model.IMG3">
+            <p class="mota-sp">@Model.MOTA6</p>
+            <img class="img-sp" src="~/Content/Img/@Model.IMG4">
+       
+</div>

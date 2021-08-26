@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta charset="utf-8" />
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item carousel-banner active">
+            <img src="~/Content/Img/banner-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption caption-banner d-md-block">
+                <h5 class="banner-headstyle">Bạn muốn tìm hiểu về bàn phím?</h5>
+                <p class="banner-textstyle slide-1">Switch là gì? Layout như thế nào? Keycap ra sao?</p>
+                <button class="banner-button">Tìm hiểu ngay!</button>
+            </div>
+        </div>
+        <div class="carousel-item carousel-banner">
+            <img src="~/Content/Img/banner-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption caption-banner d-md-block">
+                <h5 class="banner-headstyle2">Layout mới?</h5>
+                <p class="banner-textstyle slide-1">Những layout khiến cho bạn trầm trồ! Mang lại cảm giác mới mẻ!</p>
+                <button class="banner-button">Khám phá ngay!</button>
+            </div>
+        </div>
+        <div class="carousel-item carousel-banner">
+            <img src="~/Content/Img/banner-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption caption-banner d-md-block">
+                <h5 class="banner-headstyle3">Sản phẩm mới!</h5>
+                <p class="banner-textstyle slide-1">Tinh hoa của vũ trụ hội ngộ tại đây! Hãy xem thử nhé!</p>
+                <button class="banner-button">Kiểm tra ngay!</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+    $('.carousel').carousel({
+    interval: 2000
+    })
+</script>
+<br />
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-11">
+            <form>
+                <div class="form-group">
+                    <input class="form-control form-control-lg search-style" type="search" placeholder="Tìm Kiếm" name="search" id="search" />
+
+                </div>
+            </form>
+        </div>
+        <div class="col-1">
+            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-lg-9">
+            @Html.Action("Fullsize", "Home")
+            <br />
+            <br />
+            <br />
+            <br />
+            @Html.Action("TKL", "Home")
+            <br />
+            <br />
+            <br />
+            <br />
+            @Html.Action("CP", "Home")
+            <br />
+            <br />
+            <br />
+            <br />
+            @Html.Action("Numpad", "Home")
+            <br />
+            <br />
+            <br />
+            <br />
+            @Html.Action("Custom", "Home")
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="container">
+                <h1 class="loai-sp">More Option</h1>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/accessories1.png">
+                            <p class="acc-text">Key Fuller</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/acc2.jpg">
+                            <p class="acc-text">Lindy Cable</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/acc3.jpg">
+                            <p class="acc-text">Handbag</p>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/acc4.jpg">
+                            <p class="acc-text">Armrest</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/acc5.jpg">
+                            <p class="acc-text">Cleaning Stuff</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="acc-hover" href="#">
+                            <img class="acc-style" src="~/Content/img/acc6.jpg">
+                            <p class="acc-text">Stickers</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+            <h1 class="catte" style="background-color:hotpink; border-radius:12px">Categories</h1>
+            <br />
+            @Html.Action("Theloai", "Home")
+        </div>
+    </div>
+</div>
+
+

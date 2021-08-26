@@ -1,0 +1,30 @@
+﻿.welcome{
+    text-align:center;
+    color:cadetblue;
+}
+.muc{
+    text-align:left;
+    font-size:25px;
+    font-weight:500;
+    color:red;
+}
+.text-td{
+    font-size:28px;
+    font-weight:500;
+    color:red;
+}
+.muc-nhap{
+    font-size:20px;
+}
+.butt-ad{
+    width:250px;
+    height:42px;
+    font-weight:500;
+    color:white;
+    background-color:orangered;
+    border:none;
+    border-radius:5px;
+}
+.butt-ad:hover{
+    background-color:orange;
+}

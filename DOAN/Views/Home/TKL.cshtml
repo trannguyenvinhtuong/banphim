@@ -1,0 +1,19 @@
+﻿
+<div class="container">
+    <h1 class="loai-sp" style="font-size: 34px">TKL Keyboard</h1>
+    <br />
+    <div class="row">
+        @foreach (var sp in Model)
+        {
+            <div class="col-4">
+                <a class="sp-link" href="@Url.Action("Details","Details",new { MaSP=sp.MASP})">
+                    <img class="sp-kb" alt="@sp.TENPHIM" src="~/Content/img/@sp.ANHBIA" />
+                </a>
+                <button class="keyboard-name">@sp.TENPHIM</button>
+            </div>
+        }
+    </div>
+    <br />
+    <a href="@Url.Action("Xemthem2","Home")"><button class="xthem-button">Xem Thêm</button></a>
+
+</div>

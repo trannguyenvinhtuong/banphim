@@ -1,0 +1,79 @@
+﻿@using DOAN.Models
+@using PagedList.Mvc
+@using PagedList
+@model PagedList.PagedList<SANPHAM>
+
+@{
+    ViewBag.Title = "Xemthem2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-11">
+            <form>
+                <div class="form-group">
+                    <input class="form-control form-control-lg search-style" type="search" placeholder="Tìm Kiếm" name="search" id="search" />
+
+                </div>
+            </form>
+        </div>
+        <div class="col-1">
+            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+@foreach (var sp in Model)
+{
+    <div class="box-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="@Url.Action("Details","Details",new { MaSP=sp.MASP})">
+                        <img class="xthem-img" alt="@sp.TENPHIM" src="~/Content/Img/@sp.ANHBIA" />
+                    </a>
+                </div>
+                <div class="col-5">
+                    <a class="xthem-link" href="@Url.Action("Details","Details",new { MaSP=sp.MASP})"><h1 class="xthem-tensp">@sp.TENPHIM</h1></a>
+                    <br />
+                    <p class="xthem-mota">* Switch: @sp.SWITCH</p>
+                    <p class="xthem-mota">* Số phím: @sp.SOPHIM</p>
+                </div>
+                <div class="col-3">
+                    <br />
+                    <h1 class="xthem-price">@String.Format("{0:0,0}", @sp.GIA) VND</h1>
+                    <button class="xthem-mua"><i class="fas fa-cart-plus">  Thêm Vào Giỏ</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="container">
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Xemthem2", new { page = page }))
+    </div>
+    <style>
+        .MenuTrang li {
+            display: inline;
+            padding: 10px;
+            border: 1px solid black;
+            color: #FF99FF;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: antiquewhite;
+        }
+    </style>
+</div>
+
+@{
+    ViewBag.Title = "Xemthem2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+

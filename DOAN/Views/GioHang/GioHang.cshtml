@@ -1,0 +1,54 @@
+﻿@using DOAN.Models
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<div class="container">
+    <h1 class="giohang-td">Giỏ Hàng</h1>
+    <br />
+    <br />
+    <table align="center">
+        <tr style="text-align:center;background-color:aliceblue">
+            
+            <td class="coltb-2 coltb-height2"></td>
+            <td class="coltb-3"></td>
+            <td class="coltb-4">Số Lượng</td>
+            <td class="coltb-1">Đơn Giá</td>
+            <td class="coltb-1">Thành Tiền</td>
+            <td class="coltb-1">Thao Tác</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td class="coltb-height3 name-sp"><a style="text-decoration:none;color:lightcoral" href="@Url.Action("Details","Details",new { MaSP=item.sMASP})">@item.sTENPHIM</a></td>
+                <td><img class="img-control" src="~/Content/Img/@item.sANHBIA" /></td>
+                @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @sMASP = item.sMASP }))
+                {
+                    <td>
+                        <input class="form-control" type="number" min="1" name="txtSoLuong" value="@item.iSOLUONG" style="background-color:whitesmoke" />
+                    </td>
+                    <td class="tt">@String.Format("{0:0,0}", item.dGIA) VNĐ</td>
+                    <td class="tt">@String.Format("{0:0,0}", item.dTHANHTIEN) VNĐ</td>
+
+                    <td class="thaotac">@Html.ActionLink("Xóa", "XoaGioHang", new { @sMASP=item.sMASP })</td>
+
+                }
+            </tr>
+        }
+        <tr>
+            <td class="coltb-height tongtien" colspan="7">Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VND</td>
+        </tr>
+        <tr>
+            <td class="coltb-height2 xoagh" colspan="9">
+                <a style="text-decoration:none; color:black" href="@Url.Action("XoaTatcaGiohang","GioHang")">Xóa Giỏ Hàng</a>
+            </td>
+        </tr>
+        
+    </table>
+    <br />
+    <a href="@Url.Action("Dathang","GioHang")"><button class="dathang-butt">Đặt Hàng</button></a>
+</div>

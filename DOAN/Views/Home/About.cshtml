@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+@foreach (var sp in Model)
+{
+    <div class="container">
+        <h2 class="ab-ten">@sp.MAST</h2>
+        <h2 class="ab-ten">@sp.TENCT</h2>
+        <h2 class="ab-ten">@sp.TONGDAI</h2>
+        <h2 class="ab-ten">@sp.DIACHI</h2>
+    </div>
+    
+}

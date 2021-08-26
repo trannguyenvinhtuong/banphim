@@ -1,0 +1,100 @@
+﻿@model IEnumerable<DOAN.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<br />
+<h2 class="muc">Quản lý thông tin sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Tạo Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Số Phím
+        </th>
+        <th>
+            Mã Thể Loại
+        </th>
+        <th>
+            Năm Sản Xuất
+        </th>
+        <th>
+            Mã Hãng
+        </th>
+        <th>
+            Mã Nhà Phân Phối
+        </th>
+        <th>
+            Bảo Hành
+        </th>
+        <th>
+            Phụ Kiện
+        </th>
+        <th>
+            Mã Nước
+        </th>
+        <th>
+            Ảnh Bìa
+        </th>
+        <th>
+            Tên Phím
+        </th>
+        <th>
+            Ngày Cập Nhật
+        </th>
+        <th>
+            Mã Sản Phẩm
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOPHIM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMSX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MANPP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAOHANH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHUKIEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MANC)
+        </td>
+        <td>
+            <img src="~/Content/Img/@item.ANHBIA" style="width:100px"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENPHIM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYCAPNHAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MASP }) |
+            <a href="@Url.Action("Details","Details",new { MASP=item.MASP })">Details</a> |
+            <a href="@Url.Action("Xoasp","Admin",new { id=item.MASP })">Xóa</a>
+        </td>
+    </tr>
+}
+
+</table>

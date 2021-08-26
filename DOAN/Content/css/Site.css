@@ -1,0 +1,255 @@
+﻿
+.header-style {
+    background-color: #F3B4C8;
+}
+
+.menu-header {
+    width: 120px;
+    text-align: center;
+    text-shadow: 1px 1.25px #00CCCC;
+    font-size: 18.5px;
+    font-weight: 600;
+    font-family: Comic Sans MS;
+    color: black;
+    transition: 0.5s;
+}
+
+    .menu-header:hover {
+        margin-top: 7px;
+        transition: 0.5s;
+    }
+
+.carousel-banner {
+    width: 100%;
+    height: 800px;
+}
+
+.caption-banner {
+    text-align: center;
+    margin-bottom: 320px;
+    line-height: 60px;
+}
+
+h5 {
+    font-size: 70px;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px #90EE90;
+}
+
+.banner-headstyle {
+    color: #D2691E;
+}
+
+.banner-textstyle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.slide-1 {
+    color: #00CED1;
+}
+
+.banner-button {
+    width: 270px;
+    text-align: center;
+    font-size: 24px;
+    height: 60px;
+    vertical-align: middle;
+    border-radius: 8px;
+    border: none;
+    background-color: #00BFFF;
+    font-weight: 900;
+    font-family: Garamond;
+    transition: 0.5s;
+    color: #800000;
+}
+
+    .banner-button:hover {
+        background-color: #87CEEB;
+        transition: 0.5s;
+    }
+
+.banner-headstyle2 {
+    color: #993300;
+}
+
+.banner-headstyle3 {
+    color: #FF0000;
+}
+
+.loai-sp {
+    border-bottom: 5px solid #DAA520;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: time-new-roman;
+    color: #A52A2A;
+    text-shadow: 0.5px 0.5px #BC8F8F;
+}
+
+.sp-kb {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.sp-link {
+    text-decoration: none;
+}
+
+.keyboard-name {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 19px;
+    background-color: #FF3333;
+    transition: 0.5s;
+    margin-top: 18px;
+}
+
+    .keyboard-name:hover {
+        background-color: #FF66FF;
+        transition: 0.5s;
+    }
+
+.xthem-button {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #00FF00;
+    border: none;
+    border-radius: 25px;
+    transition: 0.7s;
+}
+
+    .xthem-button:hover {
+        cursor: pointer;
+        background-color: #CCFF33;
+        transition: 0.7s;
+    }
+
+.acc-style {
+    width: 100%;
+    object-fit: contain;
+    height: 80%;
+}
+
+.acc-text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.acc-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+    .acc-hover:hover {
+        transform: scale(1.5);
+        transition: all ease-in-out 0.5s;
+        text-decoration: none;
+    }
+
+.footer {
+    background-color: #DEB887;
+}
+
+.footer-item {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+    color: #8B0000;
+}
+
+.footer-item:hover {
+        text-decoration: none;
+}
+.catte{
+    font-size:60px;
+    font-weight:500;
+    text-align:center;
+    font-family: 'Freestyle Script';
+}
+.style-menucat {
+   
+    text-align: center;
+    
+    font-size: 25px;
+    font-weight: 800;
+    font-family: Comic Sans MS;
+   
+    transition: 0.5s;
+}
+    .style-menucat:hover {
+        margin-top: 7px;
+        transition: 0.5s;
+    }
+    .search-style{
+        border-radius:6px;
+        text-align:center;
+    }
+    .search-button{
+        width:100%;
+        height:50px;
+        font-size:25px;
+        border:none;
+        background-color: white;
+        text-align:left;
+        color:blueviolet;
+        font-weight:500;
+    }
+    .xthem-img{
+        width:100%;
+        height:100%;
+    }
+    .box-content{
+        height:250px;
+        
+    }
+    .xthem-tensp{
+        text-align:center;
+        font-weight:500;
+        font-size:24px;
+        
+        color:orangered;
+    }
+    .xthem-mota{
+        font-size:20px;
+        font-weight:500;
+    }
+.xthem-price {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF00CC;
+}
+.xthem-mua {
+    text-align: center;
+    width: 70%;
+    height: 43px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF3300;
+    color:white;
+    font-size:18px;
+    font-weight:400;
+}
+    .xthem-mua:hover {
+        color: black;
+        background-color: #FF0000;
+    }
+    .xthem-fit{
+        object-fit:cover;
+    }
+    .footer-content{
+        text-align:center;
+        font-size:20px;
+    }

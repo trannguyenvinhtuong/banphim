@@ -1,0 +1,38 @@
+﻿@model DOAN.Models.KHLogin
+
+@{
+    ViewBag.Title = "DKKH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+    <h1 class="thongbao">@ViewBag.Thongbao</h1>
+    <div class="login-page">
+        <h1 class="login-formtd">
+            Đăng Ký
+        </h1>
+        <br />
+        @using (Html.BeginForm("DKKH", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            <div class="form">
+                <form class="login-form">
+                    <h2 class="de-muc">Tên đăng nhập:</h2>
+                    <input type="text" placeholder="username" name="tendn" />
+                    <h2 class="de-muc">Mật khẩu:</h2>
+                    <input type="password" placeholder="password" name="matkhau" />
+                    <h2 class="de-muc">Xác nhận mật khẩu:</h2>
+                    <input type="password" placeholder="password" name="xacnhanmatkhau" />
+                    <h2 class="de-muc">Họ tên:</h2>
+                    <input type="text" placeholder="name" name="hoten" />
+                    <h2 class="de-muc">Ngày sinh:</h2>
+                    <input type="date" placeholder="birthday" name="ngaysinh" />
+                    <h2 class="de-muc">Địa chỉ:</h2>
+                    <input type="text" placeholder="address" name="diachi" />
+                    <h2 class="de-muc">Số điện thoại:</h2>
+                    <input type="number" placeholder="phone" name="sdt" />
+                    <button type="submit">Đăng ký</button>
+                    <label class="gt-dk">Bạn đã có tài khoản? Đăng nhập ngay tại <a style="text-decoration:none" href="@Url.Action("DNKH","Home")">đây!</a></label>
+                </form>
+            </div>
+        }
+    </div>

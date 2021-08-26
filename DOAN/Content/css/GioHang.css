@@ -1,0 +1,72 @@
+﻿.coltb-1{
+    width:200px;
+}
+.coltb-2{
+    width:400px;
+}
+.coltb-3{
+    width:500px;
+}
+.coltb-4{
+    width:120px;
+}
+.coltb-height2{
+    height:60px;
+}
+.img-control{
+    width:100%;
+}
+.coltb-height{
+    height:100px;
+}
+    .coltb-height3{
+        height:200px;
+    }
+.dathang-butt {
+        width: 200px;
+        height: 42px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 490px;
+        border: none;
+        color: white;
+        background-color: orangered;
+        border-radius: 8px;
+        transition: 0.6s;
+    }
+.dathang-butt:hover{
+    background-color:orange;
+    transition:0.6s;
+}
+.tongtien{
+    text-align:right;
+    font-size: 22px;
+    font-weight:600;
+    text-align:right;
+    color:red;
+}
+.name-sp{
+    font-size:22px;
+    text-align:left;
+    font-weight:500;
+}
+.xoagh{
+    text-align:right;
+    font-size:18px;
+}
+.tt{
+    text-align:right;
+    font-weight:500;
+}
+.thaotac{
+    text-align:center;
+}
+.xoagh:hover{
+    color:orangered;
+}
+.giohang-td{
+    font-weight:500;
+    font-family:'Comic Sans MS';
+    color:darkorchid;
+}

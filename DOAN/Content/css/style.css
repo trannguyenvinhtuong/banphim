@@ -1,0 +1,81 @@
+﻿.carousel-size {
+    width: 100%;
+    height: 350px;
+}
+
+.content-sp {
+    text-align: left;
+}
+
+.ten-sp {
+    font-weight: 700;
+    font-size: 25px;
+    color: #FF3333;
+}
+
+.danhmuc {
+    font-size: 20px;
+    color: #FF9900;
+}
+
+.mota-dm {
+    font-size: 22px;
+    color: #FF33FF;
+}
+
+.content-dm-sp {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tieude {
+    color: #FF6666;
+    font-size: 26px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0.5px 0.5px #006600;
+    color: #3333FF;
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+    height: 42px;
+    background-color: #FFFF99;
+    border: none;
+    transition: 0.5s;
+}
+
+    .price:hover {
+        background-color: #FFFF00;
+        transition: 0.5s;
+    }
+
+.mota-sp {
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.img-sp {
+    width: 100%;
+    height: 100%;
+}
+
+.mua {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 650;
+    background-color: #FF9999;
+    border: none;
+    transition: 0.5s;
+    border-radius: 8px;
+}
+
+    .mua:hover {
+        background-color: #FF99FF;
+        transition: 0.5s;
+        color: #993300;
+    }
